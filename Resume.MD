@@ -56,8 +56,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 ```bash
 composer require spatie/laravel-permission
-### После установки пакета и миграций можно назначить роли пользователям:
-
+### Після встановлення пакету та міграцій можна призначити ролі користувачам:
 ```bash
 <?php
 $user = User::find(1);
