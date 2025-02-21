@@ -8,4 +8,13 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: 'www.phoenix-industry.local',
+        port: 5173,
+        hmr: {
+            host: 'www.phoenix-industry.local',
+            protocol: 'http',
+            port: 5173,
+        },
+    },
 });
