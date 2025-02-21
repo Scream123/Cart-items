@@ -34,12 +34,14 @@ class ProductRepository implements ProductRepositoryInterface
 
     public function getCartCount(?int $userId, ?string $userSessionId): string
     {
-        return $re = Cart::where(function ($query) use ($userId, $userSessionId) {
+        $cartCount = Cart::where(function ($query) use ($userId, $userSessionId) {
             if ($userId) {
                 $query->where('user_id', $userId);
             } else {
                 $query->where('user_session_id', $userSessionId);
             }
         })->sum('quantity');
+
+        return (string) $cartCount;
     }
 }
