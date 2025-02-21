@@ -17,7 +17,8 @@ This project implements cart functionality using Laravel 11 with npm for fronten
    Clone this repository and navigate into the project folder:
 
    ```bash
-   git clone https://github.com/Scream123/Cart-items.git
+   git clone -b master https://github.com/Scream123/Cart-items.git
+
    cd Cart-items
 Install PHP dependencies
 
@@ -48,6 +49,13 @@ Add the default product image
 ### Place the default product image in the following folder:
 
 public/storage/default-product.jpeg
+
+### generate encryption key:
+
+```bash
+php artisan key:generate
+
+
 ### Configure the database
 
 ### Open the .env file and configure the database connection details:
